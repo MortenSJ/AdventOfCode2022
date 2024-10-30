@@ -1,0 +1,23 @@
+#Open and read file
+f = open("Day1\\input.txt", "r")
+
+#Making set_list
+set_list = []
+col = 0
+for i in f:
+    if i.strip() != "":
+        col = col + int(i)
+    else: 
+        set_list.append(col)
+        col = 0
+
+print(f'len of set_list is: {len(set_list)}')
+
+#Finding 3 line with most calories and add together
+set_list.sort(reverse=True)
+
+print(f' Top 3 from set_list: {set_list[0:3]}')
+
+max_cal = set_list[0]+set_list[1]+set_list[2]
+
+print(f'Top3 sum is: {max_cal}')

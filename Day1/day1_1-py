@@ -1,0 +1,24 @@
+#Open and read file
+f = open("Day1\\input.txt", "r")
+
+#Making set_list
+set_list = []
+col = 0
+for i in f:
+    if i.strip() != "":
+        col = col + int(i)
+    else: 
+        set_list.append(col)
+        col = 0
+
+print(f'len of set_list is: {len(set_list)}')
+
+#Finding line with most calories
+line_numer = 0
+max_sum = 0
+for x in set_list:
+    line_numer += 1
+    if x > max_sum:
+        max_sum = x
+        
+print(f'max_sum is: {max_sum} on line {line_numer}')
