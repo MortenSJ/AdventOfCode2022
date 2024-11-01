@@ -73,5 +73,3 @@ for i in f:
         counter = 0
 
 print(total_score)
-
-#2597 to low
